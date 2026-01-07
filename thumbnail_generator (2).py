@@ -105,8 +105,7 @@ if user_video:
                     result = grad_client.predict(
                         prompt=generated_prompt,
                         seed= 0,
-                        width=512,
-                        height=912,
+                        aspect_ratio="9:16",
                         num_inference_steps=4,
                         api_name="/infer"
                     )
