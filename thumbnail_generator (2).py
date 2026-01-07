@@ -1,5 +1,4 @@
 
-from transformers import pipeline
 import subprocess
 import imageio_ffmpeg
 import whisper
