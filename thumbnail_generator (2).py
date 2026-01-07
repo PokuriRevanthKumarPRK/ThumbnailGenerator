@@ -101,7 +101,7 @@ if user_video:
             # Converting from text to image
 
                 try:
-                    grad_client = Client("black-forest-labs/FLUX.1-schnell")
+                    grad_client = Client("Qwen/Qwen-Image-2512")
                     result = grad_client.predict(
                         prompt=generated_prompt,
                         seed= 0,
