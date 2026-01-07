@@ -17,6 +17,7 @@ def load_summariser():
     return pipeline("summarization", model="facebook/bart-large-cnn")
 
 st.title("Thumbnail Generator")
+st.write("By Pokuri Revanth Kumar")
 st.text("This thumbnail generator takes a video as input and automatically creates a visually engaging image suitable for a YouTube Shorts thumbnail. For faster results, a maximum video length of 2 minutes is recommended.")
 
 ffmpeg_path = imageio_ffmpeg.get_ffmpeg_exe()
