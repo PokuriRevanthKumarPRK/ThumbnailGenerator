@@ -1,0 +1,13 @@
+streamlit
+openai-whisper
+torch
+torchaudio
+transformers
+sentencepiece
+groq
+gradio-client
+imageio-ffmpeg
+ffmpeg-python
+numpy
+scipy
+tqdm
