@@ -43,7 +43,7 @@ def vid_to_aud(uploaded_video):
 
 user_video = st.file_uploader("Upload Your Video",type=["mp4"])
 if user_video:
-    audio_file = vid_to_aud(user_video)
+    audio_file, video_temp_path = vid_to_aud(user_video)
     if audio_file:
         
         try:
