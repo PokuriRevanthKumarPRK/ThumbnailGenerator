@@ -101,11 +101,12 @@ if user_video:
             # Converting from text to image
 
                 try:
-                    grad_client = Client("Qwen/Qwen-Image-2512")
+                    grad_client = Client("black-forest-labs/FLUX.1-schnell")
                     result = grad_client.predict(
                         prompt=generated_prompt,
                         seed= 0,
-                        aspect_ratio="9:16",
+                        width=512,
+                        height=912,
                         num_inference_steps=4,
                         api_name="/infer"
                     )
