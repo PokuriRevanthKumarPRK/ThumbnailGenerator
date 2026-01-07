@@ -118,7 +118,7 @@ if user_video:
 
                     st.image(image_path, caption="Generated Thumbnail")
 
-                    with open("image_path","rb") as download_image_file:
+                    with open(image_path,"rb") as download_image_file:
                         st.download_button(
                             label = "Download Thumbnail",
                             data= download_image_file,
