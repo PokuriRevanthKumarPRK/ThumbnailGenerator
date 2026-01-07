@@ -61,7 +61,7 @@ if user_video:
         if transcript:
             try:
 
-                client = Groq(api_key=GROQ_API_KEY)
+                client = Groq(api_key=st.secrets["GROQ_API_KEY"])
                 chat_completion1 = client.chat.completions.create(
                     messages=[
                         {
