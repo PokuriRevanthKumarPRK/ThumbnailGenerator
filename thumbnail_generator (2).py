@@ -70,7 +70,7 @@ if user_video:
 
                         }
                     ],
-                    model = "llama3-70b-8192",
+                    model = "llama-3.3-70b-versatile",
                 )
                 summary = chat_completion1.choices[0].message.content
             except Exception as e:
@@ -88,7 +88,7 @@ if user_video:
 
                         }
                     ],
-                    model = "llama3-70b-8192",
+                    model = "llama-3.3-70b-versatile",
                 )
                 generated_prompt= chat_completion.choices[0].message.content
             except Exception as e:
