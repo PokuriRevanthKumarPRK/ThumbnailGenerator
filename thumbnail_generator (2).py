@@ -111,12 +111,20 @@ if user_video:
                         api_name="/infer"
                     )
                 
-                    if isinstance(result, dict) and "image" in result:
-                        st.image(result["image"])
-                    elif isinstance(result, list):
-                        st.image(result[0])
+                    if isinstance(result, tuple) or isinstance(result, list):
+                        image_path = result[0]
                     else:
-                        st.image(result)
+                        image_path = result
+
+                    st.image(image_path, caption="Generated Thumbnail")
+
+                    with open("image_path","rb") as download_image_file:
+                        st.download_button(
+                            label = "Download Thumbnail",
+                            data= download_image_file,
+                            file_name="thumbnail.webp",
+                            mime="image/webp"
+                        )
                 except Exception as e :
                     st.error(f"Image generation failed: {e}")
 
