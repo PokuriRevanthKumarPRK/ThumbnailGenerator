@@ -49,7 +49,7 @@ if user_video:
         try:
             
             model =load_whisper()
-            result =model.transcribe(audio_file)
+            result =model.transcribe(str(audio_file))
             st.success("Audio has been transcribed properly")
             transcript = result["text"]
         except Exception as e:
